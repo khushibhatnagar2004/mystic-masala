@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulzar - Main Course Dishes | Restaurant Name</title>
+    <meta name="description" content="Explore our exquisite main course dishes. From traditional curries to modern fusion creations, experience the finest in Indian cuisine.">
+    
+    <!-- Preloads -->
+    <link rel="preload" href="../css/global.css" as="style">
+    <link rel="preload" href="../css/gulzar.css" as="style">
+    <link rel="preload" href="../js/gulzar.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/gulzar.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">
+                <img src="../royal-food-luxury-restaurant-logo-template-vector-27175665.webp" alt="Mystique Masala Logo" height="50" width="50">
+                Mystique Masala
+            </h1>
+            
+            <ul class="menu-items">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="take.html">Take Away</a></li>
+                <li><a href="order.html">Order Online</a></li>
+                <li><a href="shuruwaat.html">Starters</a></li>
+                <li><a href="gulzar.html" class="active">Main Course</a></li>
+                <li><a href="sheerean.html">Desserts</a></li>
+                <li><a href="saaz.html">Beverages</a></li>
+                <li><a href="mashroob.html">Accompaniments</a></li>
+                <li><a href="rozi.html">Daily Specials</a></li>
+            </ul>
+            
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-transition">
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Main Course Dishes</h1>
+                        <p class="hero-subtitle">Experience the heart of Indian cuisine with our carefully crafted main course dishes. From aromatic curries to tender kebabs, every dish tells a story of tradition and innovation.</p>
+                        <div class="hero-buttons">
+                            <a href="#menu" class="btn btn-primary">Explore Menu</a>
+                            <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="../images/mughlai-vegetable-korma-how-to-make-mughlai-vegetable-korma-ed.webp" alt="Main Course Dishes" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduction">
+            <div class="container">
+                <div class="intro-content">
+                    <h2>What Makes Our Main Course Special?</h2>
+                    <p>Our main course dishes are crafted with the finest spices, fresh ingredients, and traditional cooking techniques passed down through generations. Each dish is a perfect balance of flavors, textures, and aromas.</p>
+                    <div class="intro-features">
+                        <div class="feature">
+                            <i class="fas fa-fire"></i>
+                            <h3>Authentic Spices</h3>
+                            <p>Carefully selected and ground spices for authentic flavors</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Fresh Ingredients</h3>
+                            <p>Locally sourced, fresh vegetables and premium meats</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <h3>Slow Cooking</h3>
+                            <p>Traditional slow-cooking methods for tender results</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Main Course Menu</h2>
+                    <p>Explore our diverse selection of main course dishes</p>
+                </div>
+                
+                <div class="menu-categories">
+                    <div class="category-tabs">
+                        <button class="category-tab active" data-category="chicken">Chicken</button>
+                        <button class="category-tab" data-category="lamb">Lamb</button>
+                        <button class="category-tab" data-category="vegetarian">Vegetarian</button>
+                        <button class="category-tab" data-category="biryani">Biryani</button>
+                        <button class="category-tab" data-category="breads">Breads</button>
+                    </div>
+                    
+                    <!-- Chicken Category -->
+                    <div id="chicken" class="menu-category active">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/indian-food-curry-butter-chicken-260nw-1304901667.webp" alt="Butter Chicken" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Butter Chicken</h3>
+                                    <p class="description">Creamy, rich curry with tender chicken in a tomato-based sauce.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹450</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/Dahi_Ke_Kebab_Recipe_Greek_Yogurt_Kebabs_Mughlai_Cuisine__1.jpg" alt="Chicken Kebab" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Chicken Kebab</h3>
+                                    <p class="description">Grilled chicken kebabs marinated in aromatic spices and yogurt.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹380</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Lamb Category -->
+                    <div id="lamb" class="menu-category">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/ledkf2bg_kebab_625x300_22_September_21.png" alt="Lamb Curry" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Lamb Curry</h3>
+                                    <p class="description">Slow-cooked lamb in a rich, spiced gravy with tender meat.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹520</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/istockphoto-1398144537-612x612.jpg" alt="Lamb Biryani" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Lamb Biryani</h3>
+                                    <p class="description">Fragrant rice dish with tender lamb and aromatic spices.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹480</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Vegetarian Category -->
+                    <div id="vegetarian" class="menu-category">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/mughlai-vegetable-korma-how-to-make-mughlai-vegetable-korma-ed.webp" alt="Vegetable Korma" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Vegetable Korma</h3>
+                                    <p class="description">Mixed vegetables in a creamy, nutty sauce with mild spices.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹320</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/440c9f42f08e990de1edb4130345d61c.jpg" alt="Dal Makhani" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Dal Makhani</h3>
+                                    <p class="description">Slow-cooked black lentils with cream and aromatic spices.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹280</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Biryani Category -->
+                    <div id="biryani" class="menu-category">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/introduction-to-mughlai-indian-cuisine-with-5-iconic-recipes.webp" alt="Chicken Biryani" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Chicken Biryani</h3>
+                                    <p class="description">Layered rice dish with tender chicken and aromatic spices.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹420</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/6d4487_ae619ad8c93b49698a9f69697385ce05~mv2.webp" alt="Veg Biryani" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Vegetable Biryani</h3>
+                                    <p class="description">Fragrant rice with mixed vegetables and aromatic spices.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹350</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Breads Category -->
+                    <div id="breads" class="menu-category">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/Traditional-Indian-Bread-Choti-Rapati.jpg" alt="Naan Bread" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Naan Bread</h3>
+                                    <p class="description">Soft, fluffy bread baked in a traditional tandoor oven.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹80</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+            </div>
+          </div>
+    
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/07-curdvada.jpg" alt="Roti" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Whole Wheat Roti</h3>
+                                    <p class="description">Healthy whole wheat flatbread, perfect with any curry.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹60</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+            </div>
+            </div>
+          </div>
+            </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Chef's Special Section -->
+        <section id="chef-special">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Chef's Special</h2>
+                    <p>Today's featured main course creation</p>
+                </div>
+                
+                <div class="chef-specials">
+                    <div class="special-item">
+                        <div class="special-image">
+                            <img src="../images/mughal-period-restaurant-design-500x500.webp" alt="Chef's Special" loading="lazy">
+                        </div>
+                        <div class="special-content">
+                            <h3>Royal Mughlai Feast</h3>
+                            <p>Experience the grandeur of Mughal cuisine with this special platter featuring tender meat, aromatic rice, and rich gravies. A perfect blend of tradition and luxury.</p>
+                            <div class="special-details">
+                                <div class="prep-time">
+                                    <i class="fas fa-clock"></i>
+                                    <span>45 minutes</span>
+                                </div>
+                                <span class="price">₹680</span>
+                            </div>
+                            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                        </div>
+            </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Accompaniments Section -->
+        <section id="accompaniments">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Perfect Accompaniments</h2>
+                    <p>Complete your meal with these essential sides</p>
+                </div>
+                
+                <div class="accompaniments-grid">
+                    <div class="accompaniment-item">
+                        <div class="accompaniment-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Fresh Salads</h3>
+                        <p>Crisp vegetables with tangy dressings to refresh your palate</p>
+                    </div>
+                    
+                    <div class="accompaniment-item">
+                        <div class="accompaniment-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Raita & Chutneys</h3>
+                        <p>Cooling yogurt-based sides and tangy chutneys</p>
+                    </div>
+                    
+                    <div class="accompaniment-item">
+                        <div class="accompaniment-icon">
+                            <i class="fas fa-fire"></i>
+            </div>
+                        <h3>Pickles & Relishes</h3>
+                        <p>Spicy and tangy accompaniments for extra flavor</p>
+            </div>
+          </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Ready to Order?</h2>
+                    <p>Contact us to place your order, make reservations, or ask about our main course specialties.</p>
+                    <div class="contact-buttons">
+                        <a href="tel:+1234567890" class="btn btn-primary">
+                            <i class="fas fa-phone"></i>
+                            Call Us
+                        </a>
+                        <a href="mailto:info@restaurant.com" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Email Us
+                        </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Restaurant Name</h3>
+                    <p>Bringing you the finest dining experience with authentic flavors and modern presentation.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="take.html">Take Away</a></li>
+                        <li><a href="order.html">Order Online</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Restaurant Street, City</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> info@restaurant.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Restaurant Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/gulzar.js"></script>
+</body>
+</html>

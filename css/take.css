@@ -1,0 +1,387 @@
+/* Take Away Page Styles */
+
+/* Hero Section styles are now in global.css */
+
+/* Introduction Section */
+#introduction {
+  padding: var(--spacing-3xl) 0;
+}
+
+.intro-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-content h2 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-3xl);
+}
+
+.intro-content p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-2xl);
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+}
+
+.intro-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.feature {
+  text-align: center;
+  padding: var(--spacing-lg);
+}
+
+.feature i {
+  font-size: var(--font-size-3xl);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.feature h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-lg);
+}
+
+.feature p {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+/* Menu Section */
+#menu {
+  padding: var(--spacing-3xl) 0;
+  background: var(--background-light);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.section-header h2 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-3xl);
+}
+
+.section-header p {
+  color: var(--text-secondary);
+  font-size: var(--font-size-lg);
+}
+
+.menu-categories {
+  margin-top: var(--spacing-2xl);
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.category-tab {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: 2px solid var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all var(--transition-normal);
+  font-size: var(--font-size-sm);
+}
+
+.category-tab:hover,
+.category-tab.active {
+  background: var(--primary-color);
+  color: var(--background-light);
+  transform: translateY(-2px);
+}
+
+.menu-category {
+  display: none;
+}
+
+.menu-category.active {
+  display: block;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.menu-item {
+  background: var(--background-light);
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  box-shadow: 0 8px 25px var(--shadow-light);
+  transition: all var(--transition-normal);
+  border: 1px solid var(--border-color);
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px var(--shadow-medium);
+}
+
+.menu-item-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.menu-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.menu-item:hover .menu-item-image img {
+  transform: scale(1.05);
+}
+
+.menu-item-content {
+  padding: var(--spacing-lg);
+}
+
+.menu-item-content h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-lg);
+}
+
+.description {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+.menu-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.price {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.add-to-cart {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-xs);
+}
+
+/* Order Process Section */
+#order-process {
+  padding: var(--spacing-3xl) 0;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-2xl);
+}
+
+.step-item {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: var(--background-light);
+  border-radius: var(--border-radius-xl);
+  box-shadow: 0 8px 25px var(--shadow-light);
+  transition: all var(--transition-normal);
+  border: 1px solid var(--border-color);
+}
+
+.step-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px var(--shadow-medium);
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-lg) auto;
+  color: var(--background-light);
+  font-size: var(--font-size-2xl);
+  box-shadow: 0 8px 20px var(--shadow-medium);
+}
+
+.step-item h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-lg);
+}
+
+.step-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: var(--font-size-sm);
+}
+
+/* Contact Section */
+#contact {
+  padding: var(--spacing-3xl) 0;
+}
+
+.contact-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-content h2 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-3xl);
+}
+
+.contact-content p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-buttons .btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  
+  .intro-features {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-lg);
+  }
+  
+  .process-steps {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .category-tabs {
+    gap: var(--spacing-xs);
+  }
+  
+  .category-tab {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: var(--font-size-xs);
+  }
+  
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .intro-features {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .intro-content h2 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .intro-content p {
+    font-size: var(--font-size-base);
+  }
+  
+  .step-item {
+    padding: var(--spacing-lg);
+  }
+  
+  .step-icon {
+    width: 60px;
+    height: 60px;
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* Animation Classes */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Stagger animations for intro features */
+.feature:nth-child(1) { animation: fadeInUp 0.6s ease-out 0.1s both; }
+.feature:nth-child(2) { animation: fadeInUp 0.6s ease-out 0.2s both; }
+.feature:nth-child(3) { animation: fadeInUp 0.6s ease-out 0.3s both; }
+
+/* Stagger animations for process steps */
+.step-item:nth-child(1) { animation: fadeInUp 0.6s ease-out 0.1s both; }
+.step-item:nth-child(2) { animation: fadeInUp 0.6s ease-out 0.2s both; }
+.step-item:nth-child(3) { animation: fadeInUp 0.6s ease-out 0.3s both; }
+
+/* Menu item animations */
+.menu-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.menu-item:nth-child(1) { animation-delay: 0.1s; }
+.menu-item:nth-child(2) { animation-delay: 0.2s; }
+.menu-item:nth-child(3) { animation-delay: 0.3s; }
+.menu-item:nth-child(4) { animation-delay: 0.4s; }
+.menu-item:nth-child(5) { animation-delay: 0.5s; }
+.menu-item:nth-child(6) { animation-delay: 0.6s; }

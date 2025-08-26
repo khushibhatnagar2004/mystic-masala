@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mashroob - Accompaniments & Sides | Restaurant Name</title>
+    <meta name="description" content="Complete your meal with our essential accompaniments and sides. From fresh breads to tangy chutneys, discover the perfect complements to your main dishes.">
+    
+    <!-- Preloads -->
+    <link rel="preload" href="../css/global.css" as="style">
+    <link rel="preload" href="../css/mashroob.css" as="style">
+    <link rel="preload" href="../js/mashroob.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/mashroob.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">
+                <img src="../royal-food-luxury-restaurant-logo-template-vector-27175665.webp" alt="Mystique Masala Logo" height="50" width="50">
+                Mystique Masala
+            </h1>
+            
+            <ul class="menu-items">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="take.html">Take Away</a></li>
+                <li><a href="order.html">Order Online</a></li>
+                <li><a href="shuruwaat.html">Starters</a></li>
+                <li><a href="gulzar.html">Main Course</a></li>
+                <li><a href="sheerean.html">Desserts</a></li>
+                <li><a href="saaz.html">Beverages</a></li>
+                <li><a href="mashroob.html" class="active">Accompaniments</a></li>
+                <li><a href="rozi.html">Daily Specials</a></li>
+            </ul>
+            
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-transition">
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Accompaniments & Sides</h1>
+                        <p class="hero-subtitle">Complete your meal with our essential accompaniments and sides. From fresh breads to tangy chutneys, discover the perfect complements to your main dishes.</p>
+                        <div class="hero-buttons">
+                            <a href="#menu" class="btn btn-primary">Explore Sides</a>
+                            <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="../images/Traditional-Indian-Bread-Choti-Rapati.jpg" alt="Accompaniments & Sides" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduction">
+            <div class="container">
+                <div class="intro-content">
+                    <h2>What Makes Our Accompaniments Special?</h2>
+                    <p>Our accompaniments are carefully crafted to enhance your dining experience. Each side dish is prepared with fresh ingredients and traditional recipes to perfectly complement your main course.</p>
+                    <div class="intro-features">
+                        <div class="feature">
+                            <i class="fas fa-bread-slice"></i>
+                            <h3>Fresh Breads</h3>
+                            <p>Made fresh daily in our traditional tandoor oven</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Fresh Chutneys</h3>
+                            <p>Hand-ground chutneys with authentic spices</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-seedling"></i>
+                            <h3>Homemade Raita</h3>
+                            <p>Cooling yogurt-based sides made fresh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Accompaniments Menu</h2>
+                    <p>Explore our diverse selection of sides and accompaniments</p>
+                </div>
+                
+                <div class="menu-categories">
+                    <div class="category-tabs">
+                        <button class="category-tab active" data-category="breads">Breads</button>
+                        <button class="category-tab" data-category="chutneys">Chutneys</button>
+                        <button class="category-tab" data-category="raita">Raita</button>
+                        <button class="category-tab" data-category="pickles">Pickles</button>
+                    </div>
+                    
+                    <!-- Breads Category -->
+                    <div id="breads" class="menu-category active">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/Traditional-Indian-Bread-Choti-Rapati.jpg" alt="Naan Bread" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Naan Bread</h3>
+                                    <p class="description">Soft, fluffy bread baked in a traditional tandoor oven.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹80</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/07-curdvada.jpg" alt="Roti" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Whole Wheat Roti</h3>
+                                    <p class="description">Healthy whole wheat flatbread, perfect with any curry.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹60</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Chutneys Category -->
+                    <div id="chutneys" class="menu-category">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/mughlai-vegetable-korma-how-to-make-mughlai-vegetable-korma-ed.webp" alt="Mint Chutney" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Mint Chutney</h3>
+                                    <p class="description">Fresh mint leaves ground with green chilies and spices.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹40</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/440c9f42f08e990de1edb4130345d61c.jpg" alt="Tamarind Chutney" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Tamarind Chutney</h3>
+                                    <p class="description">Sweet and tangy tamarind chutney with jaggery.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹50</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Raita Category -->
+                    <div id="raita" class="menu-category">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/kesariya-thandai-kesaria-sardai-traditional-600nw-2267489389.webp" alt="Cucumber Raita" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Cucumber Raita</h3>
+                                    <p class="description">Cooling yogurt with fresh cucumber and mint.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹60</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/afluwmjw0a.webp" alt="Boonde Raita" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Boonde Raita</h3>
+                                    <p class="description">Yogurt with crispy boondi and aromatic spices.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹70</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pickles Category -->
+                    <div id="pickles" class="menu-category">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/introduction-to-mughlai-indian-cuisine-with-5-iconic-recipes.webp" alt="Mango Pickle" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Mango Pickle</h3>
+                                    <p class="description">Spicy and tangy raw mango pickle with oil and spices.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹80</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+            </div>
+          </div>
+    
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/6d4487_ae619ad8c93b49698a9f69697385ce05~mv2.webp" alt="Mixed Pickle" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Mixed Pickle</h3>
+                                    <p class="description">Assorted vegetables pickled in aromatic spices.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹90</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+            </div>
+            </div>
+          </div>
+            </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Chef's Special Section -->
+        <section id="chef-special">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Chef's Special Accompaniment</h2>
+                    <p>Today's featured side dish creation</p>
+                </div>
+                
+                <div class="chef-specials">
+                    <div class="special-item">
+                        <div class="special-image">
+                            <img src="../images/mughal-period-restaurant-design-500x500.webp" alt="Chef's Special" loading="lazy">
+                        </div>
+                        <div class="special-content">
+                            <h3>Royal Accompaniment Platter</h3>
+                            <p>Experience a grand selection of our finest accompaniments in one magnificent platter. Perfect for sharing and sampling the best of our side dish collection.</p>
+                            <div class="special-details">
+                                <div class="prep-time">
+                                    <i class="fas fa-clock"></i>
+                                    <span>25 minutes</span>
+                                </div>
+                                <span class="price">₹380</span>
+                            </div>
+                            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                        </div>
+            </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Accompaniments Section -->
+        <section id="accompaniments">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Perfect Pairings</h2>
+                    <p>Discover how our accompaniments enhance your main dishes</p>
+                </div>
+                
+                <div class="accompaniments-grid">
+                    <div class="accompaniment-item">
+                        <div class="accompaniment-icon">
+                            <i class="fas fa-bread-slice"></i>
+                        </div>
+                        <h3>Bread & Curry</h3>
+                        <p>Fresh breads perfect for scooping up rich curries</p>
+                    </div>
+                    
+                    <div class="accompaniment-item">
+                        <div class="accompaniment-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Chutney & Starters</h3>
+                        <p>Tangy chutneys to enhance your appetizers</p>
+                    </div>
+                    
+                    <div class="accompaniment-item">
+                        <div class="accompaniment-icon">
+                            <i class="fas fa-seedling"></i>
+            </div>
+                        <h3>Raita & Spicy Food</h3>
+                        <p>Cooling raita to balance spicy dishes</p>
+            </div>
+          </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Ready to Order?</h2>
+                    <p>Contact us to place your order, make reservations, or ask about our accompaniment specialties.</p>
+                    <div class="contact-buttons">
+                        <a href="tel:+1234567890" class="btn btn-primary">
+                            <i class="fas fa-phone"></i>
+                            Call Us
+                        </a>
+                        <a href="mailto:info@restaurant.com" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Email Us
+                        </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Restaurant Name</h3>
+                    <p>Bringing you the finest dining experience with authentic flavors and modern presentation.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="take.html">Take Away</a></li>
+                        <li><a href="order.html">Order Online</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Restaurant Street, City</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> info@restaurant.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Restaurant Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/mashroob.js"></script>
+</body>
+</html>

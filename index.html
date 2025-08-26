@@ -4,14 +4,535 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant</title>
-    <link href="style.css" rel="stylesheet">
+    <style>
+/* Navbar styles */
+.navbar {
+  width: 100%;
+  background: linear-gradient(135deg, #f1c40f, #f39c12);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+}
+
+/* Menu Items (desktop) */
+.menu-items {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-items li a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.menu-items li a:hover {
+  color: #8b4513;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Hamburger button */
+.hamburger-lines {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger-lines .line {
+  width: 25px;
+  height: 3px;
+  background: #2c3e50;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Showcase Area */
+.showcase-area {
+  padding: 2rem 1rem;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.showcase-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.showcase-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Food Section */
+#food {
+  padding: 4rem 1rem;
+}
+
+.food-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.food-type {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.food-type:hover {
+  transform: translateY(-5px);
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.food-type:hover .img-container img {
+  transform: scale(1.1);
+}
+
+.img-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.img-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Food Menu */
+#food-menu {
+  padding: 4rem 1rem;
+  background: #f8f9fa;
+}
+
+.food-menu-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.food-menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.food-menu-item {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.food-menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.food-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.food-description {
+  padding: 1.5rem;
+}
+
+.food-titile {
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+.food-description a {
+  text-decoration: none;
+}
+
+.food-description a:hover .food-titile {
+  color: #d35400;
+}
+
+/* About Section */
+#about {
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  position: relative;
+  overflow: hidden;
+}
+
+#about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="50" cy="10" r="1" fill="%23ffffff" opacity="0.03"/><circle cx="10" cy="90" r="1" fill="%23ffffff" opacity="0.03"/><circle cx="90" cy="50" r="1" fill="%23ffffff" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+  pointer-events: none;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-container h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  position: relative;
+  display: inline-block;
+}
+
+.about-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #f1c40f, #f39c12);
+  border-radius: 2px;
+}
+
+.about-container p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  margin-bottom: 2rem;
+  color: #555;
+  position: relative;
+}
+
+.about-container p:nth-child(3) {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #f1c40f;
+  font-style: italic;
+}
+
+.about-container p:last-child {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  background: linear-gradient(135deg, #f1c40f, #f39c12);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Testimonials */
+#testimonials {
+  padding: 4rem 1rem;
+  background: #f8f9fa;
+}
+
+.testimonial-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.testimonial-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.customer-photo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.customer-name {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.star-rating {
+  margin-bottom: 1rem;
+}
+
+.fa-star.checked {
+  color: #ffc107;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+#contact {
+  padding: 4rem 1rem;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.contact-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.form-container h2 {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-container input:focus {
+  outline: none;
+  border-color: #d35400;
+}
+
+.btn {
+  background: #d35400;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #b8441f;
+}
+
+/* Footer */
+#footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.icons {
+  margin-top: 1rem;
+}
+
+.icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+.icons a:hover {
+  color: #d35400;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0.5rem 1rem;
+  }
+  
+  .logo {
+    font-size: 16px;
+    order: 2;
+  }
+  
+  .logo img {
+    height: 35px;
+    width: 35px;
+  }
+  
+  .hamburger-lines {
+    display: flex;
+    order: 1;
+  }
+  
+  .menu-items {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(135deg, #f1c40f, #f39c12);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1rem;
+    transition: right 0.4s ease;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    order: 3;
+  }
+
+  .menu-items.active {
+    right: 0;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .food-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .food-menu-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .testimonial-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.8rem;
+  }
+  
+  .logo {
+    font-size: 14px;
+  }
+  
+  .logo img {
+    height: 30px;
+    width: 30px;
+  }
+  
+  .food-menu-heading,
+  .testimonial-title,
+  .about-container h2 {
+    font-size: 2rem;
+  }
+  
+  .showcase-area,
+  #food,
+  #food-menu,
+  #about,
+  #testimonials,
+  #contact {
+    padding: 2rem 1rem;
+  }
+}
+</style>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-TROl5L3kwFsqUUrjA3eDBB9ZPv8/9IrdR0wUmFeK2MEf8QkeI3V1Qx5tgVGiStzr" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/732bfb5500.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
   <nav class="navbar">
-    <div class="navbar-container container">
+    <div class="navbar-container">
         <div class="hamburger-lines">
             <span class="line line1"></span>
             <span class="line line2"></span>
@@ -24,27 +545,25 @@
             <li><a href="#testimonials">Testimonial</a></li>            
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <h1 class="logo"><img src="royal-food-luxury-restaurant-logo-template-vector-27175665.webp" height="40px" width="40px"> Mystique Masala</h1>
+        <h1 class="logo"><img src="royal-food-luxury-restaurant-logo-template-vector-27175665.webp" alt="Logo"> Mystique Masala</h1>
     </div>
 </nav>
+
   <section class="showcase-area" id="showcase">
     <div class="showcase-container">
       <h1 class="main-title" id="home">Vintage Mughalai Experience</h1>
-      <img src="chef-welcoming-guest-in-restaurant-2660146-2215319.webp">
+      <img src="chef-welcoming-guest-in-restaurant-2660146-2215319.webp" alt="Chef welcoming guests">
     </div>
   </section>
-  <br><br><br><br><br><br><br><br>
-  
+
   <section id="food">
-    
-    <div class="food-container container">
+    <div class="food-container">
       <a href="#food-menu">
       <div class="food-type fruite">
         <div class="img-container">
-        <img decoding="async" src="mohan-mahal-restaurant-jaipur-1366x768.webp" alt="error" class="image"/>           
+        <img src="mohan-mahal-restaurant-jaipur-1366x768.webp" alt="Dine In" class="image"/>          
           <div class="img-content">
             <h3>Dine In</h3>
-            
           </div>
         </div>
       </div>
@@ -52,10 +571,9 @@
       <a href="take.html">
       <div class="food-type vegetable">
         <div class="img-container">
-          <img decoding="async" src="front-view-packed-food-prepared-takeaway_23-2149025887.avif" alt="error" class="image"/>
+          <img src="front-view-packed-food-prepared-takeaway_23-2149025887.avif" alt="Take Away" class="image"/>
           <div class="img-content">
             <h3>Take Away</h3>
-            
           </div>
         </div>
       </div>
@@ -63,22 +581,22 @@
       <a href="order.html">
       <div class="food-type grin">
         <div class="img-container">
-          <img decoding="async" src="order online.jpg" alt="error" class="image" height="225px"/>
+          <img src="order online.jpg" alt="Order Online" class="image"/>
           <div class="img-content">
             <h3>Order Online</h3>
-            
           </div>
         </div>
       </div>
       </a>
     </div>
   </section>
+
   <section id="food-menu">
     <h2 class="food-menu-heading">Menu</h2>
-    <div class="food-menu-container container">
+    <div class="food-menu-container">
       <div class="food-menu-item">
         <div class="food-img">
-          <img decoding="async" src="Dahi_Ke_Kebab_Recipe_Greek_Yogurt_Kebabs_Mughlai_Cuisine__1.jpg" alt="" />
+          <img src="Dahi_Ke_Kebab_Recipe_Greek_Yogurt_Kebabs_Mughlai_Cuisine__1.jpg" alt="Shuruwaat" />
         </div>
         <div class="food-description">
           <a href="shuruwaat.html"><h2 class="food-titile">Shuruwaat</h2></a>
@@ -90,7 +608,7 @@
 
       <div class="food-menu-item">
         <div class="food-img">
-          <img decoding="async" src="introduction-to-mughlai-indian-cuisine-with-5-iconic-recipes.webp" alt="error" />
+          <img src="introduction-to-mughlai-indian-cuisine-with-5-iconic-recipes.webp" alt="Gulzar-e-Daawat" />
         </div>
         <div class="food-description">
           <a href="gulzar.html"><h2 class="food-titile">Gulzar-e-Daawat</h2></a>
@@ -99,9 +617,10 @@
           </p>
         </div>
       </div>
+      
       <div class="food-menu-item">
         <div class="food-img">
-          <img decoding="async" src="Traditional-Indian-Bread-Choti-Rapati.jpg" alt="" />
+          <img src="Traditional-Indian-Bread-Choti-Rapati.jpg" alt="Rozi" />
         </div>
         <div class="food-description">
           <a href="rozi.html"><h2 class="food-titile">Rozi</h2></a>
@@ -110,9 +629,10 @@
           </p>
         </div>
       </div>
+      
       <div class="food-menu-item">
         <div class="food-img">
-          <img decoding="async" src="mughlai-vegetable-korma-how-to-make-mughlai-vegetable-korma-ed.webp" alt="" />
+          <img src="mughlai-vegetable-korma-how-to-make-mughlai-vegetable-korma-ed.webp" alt="Saaz" />
         </div>
         <div class="food-description">
           <a href="saaz.html"><h2 class="food-titile">Saaz</h2></a>
@@ -121,9 +641,10 @@
           </p>
         </div>
       </div>
+      
       <div class="food-menu-item">
         <div class="food-img">
-          <img decoding="async" src="afluwmjw0a.webp" alt="" />
+          <img src="afluwmjw0a.webp" alt="Sheeren" />
         </div>
         <div class="food-description">
           <a href="sheeran.html"><h2 class="food-titile">Sheeren</h2></a>
@@ -132,9 +653,10 @@
           </p>
         </div>
       </div>
+      
       <div class="food-menu-item">
         <div class="food-img">
-          <img decoding="async" src="kesariya-thandai-kesaria-sardai-traditional-600nw-2267489389.webp" alt="" />
+          <img src="kesariya-thandai-kesaria-sardai-traditional-600nw-2267489389.webp" alt="Mashroob" />
         </div>
         <div class="food-description">
           <a href="mashroob.html"><h2 class="food-titile">Mashroob</h2></a>
@@ -147,7 +669,7 @@
   </section>
 
   <section id="about">
-    <div class="about-container container">
+    <div class="about-container">
       <h2>About Us</h2>
       <p>Welcome to Mystique Masala, where we offer a vintage Mughalai dining experience like no other. Our restaurant is inspired by the grandeur and opulence of the Mughal era, bringing you exquisite flavors and royal hospitality.</p>
       <p>At Mystique Masala, we strive to create an ambiance of elegance and sophistication, where every meal is a journey through time, indulging in the rich culinary heritage of India's royal past.</p>
@@ -157,11 +679,11 @@
 
   <section id="testimonials">
     <h2 class="testimonial-title">What Our Customers Say</h2>
-    <div class="testimonial-container container">
+    <div class="testimonial-container">
       <div class="testimonial-box">
         <div class="customer-detail">
           <div class="customer-photo">
-            <img decoding="async" src="https://i.postimg.cc/5Nrw360Y/male-photo1.jpg" alt="" />
+            <img src="https://i.postimg.cc/5Nrw360Y/male-photo1.jpg" alt="Ross Lee" />
             <p class="customer-name">Ross Lee</p>
           </div>
         </div>
@@ -175,12 +697,12 @@
         <p class="testimonial-text">
           Mystique Masala offers an exceptional dining experience. From the warm ambiance to the delectable flavors, every visit leaves me craving more
         </p>
-
       </div>
+      
       <div class="testimonial-box">
         <div class="customer-detail">
           <div class="customer-photo">
-            <img decoding="async" src="https://i.postimg.cc/sxd2xCD2/female-photo1.jpg" alt="" />
+            <img src="https://i.postimg.cc/sxd2xCD2/female-photo1.jpg" alt="Amelia Watson" />
             <p class="customer-name">Amelia Watson</p>
           </div>
         </div>
@@ -194,12 +716,12 @@
         <p class="testimonial-text">
           "The Galouti Kababs at Mystique Masala are simply divine! Tender, flavorful, and perfectly spiced. A must-try for anyone craving authentic Mughlai cuisine
         </p>
-
       </div>
+      
       <div class="testimonial-box">
         <div class="customer-detail">
           <div class="customer-photo">
-            <img decoding="async" src="https://i.postimg.cc/fy90qvkV/male-photo3.jpg" alt="" />
+            <img src="https://i.postimg.cc/fy90qvkV/male-photo3.jpg" alt="Ben Roy" />
             <p class="customer-name">Ben Roy</p>
           </div>
         </div>
@@ -213,32 +735,32 @@
         <p class="testimonial-text">
           I've been coming to Mystique Masala for years, and their Samosa Chaat never disappoints. It's the perfect blend of crispy, tangy, and spicy flavors that keep me coming back for more.
         </p>
-
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <div class="contact-container container">
+    <div class="contact-container">
       <div class="contact-img">
-        <img decoding="async" src="mughal-period-restaurant-design-500x500.webp" alt="" />
+        <img src="mughal-period-restaurant-design-500x500.webp" alt="Restaurant Interior" />
       </div>
 
       <div class="form-container">
         <h2>FOR Bookings</h2>
         <form id="booking-form">
-          <input type="text" id="name" placeholder="Name" required><br><br>
-          <input type="email" id="email" placeholder="Email" required><br><br>
-          <input type="tel" id="phone" placeholder="Phone" required><br><br>
-          <input type="date" id="date" required><br><br>
-          <input type="time" id="time" required><br><br>
+          <input type="text" id="name" placeholder="Name" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="tel" id="phone" placeholder="Phone" required>
+          <input type="date" id="date" required>
+          <input type="time" id="time" required>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
     </div>
   </section>
+  
   <footer id="footer">
-    <h2>Mystique Masala &copy; all rights reserved</h2><br>
+    <h2>Mystique Masala &copy; all rights reserved</h2>
     <div class="icons">
       <a href="https://facebook.com/" target="_blank">
       <i class="fa-brands fa-facebook"></i>
@@ -255,8 +777,15 @@
     </div>
 </footer>
 
-
 <script>
+  const hamburger = document.querySelector(".hamburger-lines");
+  const menu = document.querySelector(".menu-items");
+
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    hamburger.classList.toggle("open");
+  });
+
   document.getElementById("booking-form").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -302,8 +831,6 @@
     document.getElementById("time").value = "";
   });
 </script>
-
-
 
 </body>
 </html>

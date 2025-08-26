@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuruwaat - Starters & Appetizers | Restaurant Name</title>
+    <meta name="description" content="Begin your culinary journey with our exquisite starters and appetizers. From crispy pakoras to tender kebabs, discover the perfect beginning to your meal.">
+    
+    <!-- Preloads -->
+    <link rel="preload" href="../css/global.css" as="style">
+    <link rel="preload" href="../css/shuruwaat.css" as="style">
+    <link rel="preload" href="../js/shuruwaat.js" as="script">
+    
+    <style>/* Navbar */
+.navbar {
+  width: 100%;
+  background: var(--background-light);
+  box-shadow: 0 4px 12px var(--shadow-light);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.logo img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+/* Menu Items */
+.menu-items {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu-items li a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu-items li a:hover,
+.menu-items li a.active {
+  color: var(--primary-color);
+}
+
+/* Hamburger */
+.hamburger-lines {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0.3rem;
+}
+
+.hamburger-lines .line {
+  width: 25px;
+  height: 3px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .menu-items {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 250px;
+    height: calc(100vh - 70px);
+    background: var(--background-light);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    gap: 1rem;
+    transition: right 0.4s ease;
+    box-shadow: -5px 0 15px var(--shadow-light);
+  }
+
+  .menu-items.active {
+    right: 0;
+  }
+
+  .hamburger-lines {
+    display: flex;
+  }
+}
+</style>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/shuruwaat.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">
+                <img src="../royal-food-luxury-restaurant-logo-template-vector-27175665.webp" alt="Mystique Masala Logo" height="50" width="50">
+                Mystique Masala
+            </h1>
+            
+            <ul class="menu-items">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="take.html">Take Away</a></li>
+                <li><a href="order.html">Order Online</a></li>
+                <li><a href="shuruwaat.html" class="active">Starters</a></li>
+                <li><a href="gulzar.html">Main Course</a></li>
+                <li><a href="sheerean.html">Desserts</a></li>
+                <li><a href="saaz.html">Beverages</a></li>
+                <li><a href="mashroob.html">Accompaniments</a></li>
+                <li><a href="rozi.html">Daily Specials</a></li>
+            </ul>
+            
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-transition">
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Starters & Appetizers</h1>
+                        <p class="hero-subtitle">Begin your culinary journey with our exquisite starters and appetizers. From crispy pakoras to tender kebabs, discover the perfect beginning to your meal.</p>
+                        <div class="hero-buttons">
+                            <a href="#menu" class="btn btn-primary">Explore Starters</a>
+                            <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="../images/selective-focus-delicious-indian-food-260nw-2172468941.webp" alt="Starters & Appetizers" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduction">
+            <div class="container">
+                <div class="intro-content">
+                    <h2>What Makes Our Starters Special?</h2>
+                    <p>Our starters are crafted to awaken your taste buds and set the perfect tone for your dining experience. Each appetizer is prepared with fresh ingredients and traditional recipes.</p>
+                    <div class="intro-features">
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <h3>Perfect Portions</h3>
+                            <p>Carefully sized portions to whet your appetite</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-fire"></i>
+                            <h3>Fresh Preparation</h3>
+                            <p>Made to order with the freshest ingredients</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <h3>Quick Service</h3>
+                            <p>Fast preparation for immediate satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Starters Menu</h2>
+                    <p>Explore our diverse selection of appetizers</p>
+                </div>
+                
+                <div class="menu-categories">
+                    <div class="category-tabs">
+                        <button class="category-tab active" data-category="vegetarian">Vegetarian</button>
+                        <button class="category-tab" data-category="non-vegetarian">Non-Vegetarian</button>
+                        <button class="category-tab" data-category="seafood">Seafood</button>
+                        <button class="category-tab" data-category="fusion">Fusion</button>
+                    </div>
+                    
+                    <!-- Vegetarian Category -->
+                    <div id="vegetarian" class="menu-category active">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/07-curdvada.jpg" alt="Curd Vada" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Curd Vada</h3>
+                                    <p class="description">Crispy lentil fritters served with creamy yogurt and tangy chutney.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹180</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/mughlai-vegetable-korma-how-to-make-mughlai-vegetable-korma-ed.webp" alt="Vegetable Pakora" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Vegetable Pakora</h3>
+                                    <p class="description">Mixed vegetable fritters in chickpea batter with aromatic spices.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹160</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Non-Vegetarian Category -->
+                    <div id="non-vegetarian" class="menu-category">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/Dahi_Ke_Kebab_Recipe_Greek_Yogurt_Kebabs_Mughlai_Cuisine__1.jpg" alt="Chicken Kebab" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Chicken Kebab</h3>
+                                    <p class="description">Tender chicken kebabs marinated in yogurt and aromatic spices.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹280</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/ledkf2bg_kebab_625x300_22_September_21.png" alt="Lamb Seekh Kebab" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Lamb Seekh Kebab</h3>
+                                    <p class="description">Minced lamb kebabs with onions, herbs, and spices on skewers.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹320</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Seafood Category -->
+                    <div id="seafood" class="menu-category">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/360_F_475652107_Sx73qgHWljGylX5KRyDFeE46ftX0A4EE.jpg" alt="Fish Pakora" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Fish Pakora</h3>
+                                    <p class="description">Fresh fish fillets coated in spiced chickpea batter and fried.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹350</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/istockphoto-1398144537-612x612.jpg" alt="Prawn Kebab" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Prawn Kebab</h3>
+                                    <p class="description">Succulent prawns marinated in spices and grilled to perfection.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹420</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Fusion Category -->
+                    <div id="fusion" class="menu-category">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/440c9f42f08e990de1edb4130345d61c.jpg" alt="Fusion Spring Roll" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Fusion Spring Roll</h3>
+                                    <p class="description">Crispy rolls filled with Indian spices and Asian vegetables.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹220</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+            </div>
+          </div>
+    
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/6d4487_ae619ad8c93b49698a9f69697385ce05~mv2.webp" alt="Spicy Nachos" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Spicy Nachos</h3>
+                                    <p class="description">Crispy nachos topped with Indian spices and chutneys.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹240</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+            </div>
+            </div>
+          </div>
+            </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Chef's Special Section -->
+        <section id="chef-special">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Chef's Special Starter</h2>
+                    <p>Today's featured appetizer creation</p>
+                </div>
+                
+                <div class="chef-specials">
+                    <div class="special-item">
+                        <div class="special-image">
+                            <img src="../images/mughal-period-restaurant-design-500x500.webp" alt="Chef's Special" loading="lazy">
+                        </div>
+                        <div class="special-content">
+                            <h3>Royal Starter Platter</h3>
+                            <p>Experience a grand selection of our finest starters in one magnificent platter. Perfect for sharing and sampling the best of our appetizer collection.</p>
+                            <div class="special-details">
+                                <div class="prep-time">
+                                    <i class="fas fa-clock"></i>
+                                    <span>20 minutes</span>
+                                </div>
+                                <span class="price">₹580</span>
+                            </div>
+                            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                        </div>
+            </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Accompaniments Section -->
+        <section id="accompaniments">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Perfect Accompaniments</h2>
+                    <p>Complete your starter experience with these essential sides</p>
+                </div>
+                
+                <div class="accompaniments-grid">
+                    <div class="accompaniment-item">
+                        <div class="accompaniment-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Fresh Chutneys</h3>
+                        <p>Tangy and spicy chutneys to enhance your starters</p>
+                    </div>
+                    
+                    <div class="accompaniment-item">
+                        <div class="accompaniment-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Raita & Dips</h3>
+                        <p>Cooling yogurt-based accompaniments</p>
+                    </div>
+                    
+                    <div class="accompaniment-item">
+                        <div class="accompaniment-icon">
+                            <i class="fas fa-fire"></i>
+            </div>
+                        <h3>Pickles & Relishes</h3>
+                        <p>Spicy and tangy additions for extra flavor</p>
+            </div>
+          </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Ready to Order?</h2>
+                    <p>Contact us to place your order, make reservations, or ask about our starter specialties.</p>
+                    <div class="contact-buttons">
+                        <a href="tel:+1234567890" class="btn btn-primary">
+                            <i class="fas fa-phone"></i>
+                            Call Us
+                        </a>
+                        <a href="mailto:info@restaurant.com" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Email Us
+                        </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Restaurant Name</h3>
+                    <p>Bringing you the finest dining experience with authentic flavors and modern presentation.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="take.html">Take Away</a></li>
+                        <li><a href="order.html">Order Online</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Restaurant Street, City</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> info@restaurant.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Restaurant Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/shuruwaat.js"></script>
+</body>
+</html>

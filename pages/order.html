@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Order - Mystique Masala</title>
+  <meta name="description" content="Order delicious Mughlai cuisine online from Mystique Masala. Fast delivery to your doorstep.">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="../css/global.css" as="style">
+  <link rel="preload" href="../css/order.css" as="style">
+  
+  <!-- Stylesheets -->
+  <link href="../css/global.css" rel="stylesheet">
+  <link href="../css/order.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="../royal-food-luxury-restaurant-logo-template-vector-27175665.webp">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <h1 class="logo">
+        <img src="../images/royal-food-luxury-restaurant-logo-template-vector-27175665.webp" alt="Mystique Masala Logo" height="50" width="50">
+        Mystique Masala
+      </h1>
+      
+      <ul class="menu-items">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#food-menu">Menu</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+    </div>
+  </nav>
+      <!-- Cart Toggle Button -->
+      <div class="absolute fixed" id="cart-toggle">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cart-count">0</span>
+      </div>
+
+    <!-- Cart Section -->
+    <section id="cart-section" class="cart-sidebar absolute fixed">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="close-cart" id="close-cart">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="cart-items" id="cart-items">
+        <!-- Cart items will be displayed here -->
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cart-total">₹0.00</span>
+        </div>
+        <button class="btn btn-primary btn-checkout" id="checkout-btn">
+          Proceed to Checkout
+        </button>
+      </div>
+    </section>
+
+  <!-- Main Content -->
+  <main class="page-transition">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-container">
+          <div class="hero-content">
+            <h1 class="hero-title">Order Online & Get Delivered</h1>
+            <p class="hero-subtitle">Enjoy our authentic Mughlai cuisine delivered right to your doorstep. Fast, reliable, and delicious!</p>
+            <div class="hero-buttons">
+              <a href="#menu" class="btn btn-primary">View Menu</a>
+              <a href="#delivery-info" class="btn btn-secondary">Delivery Info</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="../images/order online.jpg" alt="Online Ordering" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search and Location Section -->
+    <section id="search-section" class="bg-light">
+      <div class="container">
+        <div class="search-container">
+          <div class="location-selector">
+            <i class="fas fa-map-marker-alt"></i>
+            <select id="location-select">
+              <option value="">Select your location</option>
+              <option value="downtown">Downtown</option>
+              <option value="uptown">Uptown</option>
+              <option value="midtown">Midtown</option>
+              <option value="suburbs">Suburbs</option>
+            </select>
+          </div>
+          <div class="search-bar">
+            <input type="search" placeholder="Search for dishes..." id="search-input">
+            <button class="btn btn-primary">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+      <div class="container">
+        <h2 class="section-heading text-center">Our Menu</h2>
+        <div class="menu-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="starters">Starters</button>
+          <button class="filter-btn" data-filter="main-course">Main Course</button>
+          <button class="filter-btn" data-filter="breads">Breads</button>
+          <button class="filter-btn" data-filter="desserts">Desserts</button>
+          <button class="filter-btn" data-filter="beverages">Beverages</button>
+        </div>
+        
+        <div class="menu-grid">
+          <!-- Sample menu items -->
+          <div class="menu-item" data-category="starters">
+            <div class="menu-item-image">
+              <img src="../images/indian-food-curry-butter-chicken-260nw-1304901667.webp" alt="Chicken Tikka">
+            </div>
+            <div class="menu-item-content">
+              <h3>Chicken Tikka</h3>
+              <p class="description">Tender chicken marinated in spices and grilled to perfection</p>
+              <div class="menu-item-footer">
+                <span class="price">₹350</span>
+                <button class="btn btn-primary add-to-cart" data-name="Chicken Tikka" data-price="₹350" data-image="../images/indian-food-curry-butter-chicken-260nw-1304901667.webp">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item" data-category="main-course">
+            <div class="menu-item-image">
+              <img src="../images/indian-food-curry-butter-chicken-260nw-1304901667.webp" alt="Butter Chicken">
+            </div>
+            <div class="menu-item-content">
+              <h3>Butter Chicken</h3>
+              <p class="description">Creamy tomato-based curry with tender chicken pieces</p>
+              <div class="menu-item-footer">
+                <span class="price">₹450</span>
+                <button class="btn btn-primary add-to-cart" data-name="Butter Chicken" data-price="₹450" data-image="../images/indian-food-curry-butter-chicken-260nw-1304901667.webp">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item" data-category="breads">
+            <div class="menu-item-image">
+              <img src="../images/Traditional-Indian-Bread-Choti-Rapati.jpg" alt="Naan Bread">
+            </div>
+            <div class="menu-item-content">
+              <h3>Naan Bread</h3>
+              <p class="description">Soft and fluffy Indian bread baked in tandoor</p>
+              <div class="menu-item-footer">
+                <span class="price">₹50</span>
+                <button class="btn btn-primary add-to-cart" data-name="Naan Bread" data-price="₹50" data-image="../images/Traditional-Indian-Bread-Choti-Rapati.jpg">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item" data-category="desserts">
+            <div class="menu-item-image">
+              <img src="../images/kesariya-thandai-kesaria-sardai-traditional-600nw-2267489389.webp" alt="Gulab Jamun">
+            </div>
+            <div class="menu-item-content">
+              <h3>Gulab Jamun</h3>
+              <p class="description">Sweet milk solids dumplings in sugar syrup</p>
+              <div class="menu-item-footer">
+                <span class="price">₹80</span>
+                <button class="btn btn-primary add-to-cart" data-name="Gulab Jamun" data-price="₹80" data-image="../images/kesariya-thandai-kesaria-sardai-traditional-600nw-2267489389.webp">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item" data-category="beverages">
+            <div class="menu-item-image">
+              <img src="../images/kesariya-thandai-kesaria-sardai-traditional-600nw-2267489389.webp" alt="Masala Chai">
+            </div>
+            <div class="menu-item-content">
+              <h3>Masala Chai</h3>
+              <p class="description">Spiced Indian tea with milk and aromatic spices</p>
+              <div class="menu-item-footer">
+                <span class="price">₹40</span>
+                <button class="btn btn-primary add-to-cart" data-name="Masala Chai" data-price="₹40" data-image="../images/kesariya-thandai-kesaria-sardai-traditional-600nw-2267489389.webp">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="menu-item" data-category="starters">
+            <div class="menu-item-image">
+              <img src="../images/Dahi_Ke_Kebab_Recipe_Greek_Yogurt_Kebabs_Mughlai_Cuisine__1.jpg" alt="Paneer Tikka">
+            </div>
+            <div class="menu-item-content">
+              <h3>Paneer Tikka</h3>
+              <p class="description">Grilled cottage cheese with Indian spices</p>
+              <div class="menu-item-footer">
+                <span class="price">₹300</span>
+                <button class="btn btn-primary add-to-cart" data-name="Paneer Tikka" data-price="₹300" data-image="../images/Dahi_Ke_Kebab_Recipe_Greek_Yogurt_Kebabs_Mughlai_Cuisine__1.jpg">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- Delivery Information -->
+    <section id="delivery-info" class="bg-light">
+      <div class="container">
+        <h2 class="section-heading text-center">Delivery Information</h2>
+        <div class="delivery-grid">
+          <div class="delivery-card">
+            <div class="delivery-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Delivery Time</h3>
+            <p>30-45 minutes from order confirmation</p>
+          </div>
+          <div class="delivery-card">
+            <div class="delivery-icon">
+              <i class="fas fa-truck"></i>
+            </div>
+            <h3>Free Delivery</h3>
+            <p>On orders above ₹500</p>
+          </div>
+          <div class="delivery-card">
+            <div class="delivery-icon">
+              <i class="fas fa-map-marked-alt"></i>
+            </div>
+            <h3>Delivery Areas</h3>
+            <p>Within 10km radius</p>
+          </div>
+          <div class="delivery-card">
+            <div class="delivery-icon">
+              <i class="fas fa-credit-card"></i>
+            </div>
+            <h3>Payment Options</h3>
+            <p>Cash, Card, UPI, Digital Wallets</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Order -->
+    <section id="how-to-order">
+      <div class="container">
+        <h2 class="section-heading text-center">How to Order</h2>
+        <div class="order-steps">
+          <div class="order-step">
+            <div class="step-number">1</div>
+            <h3>Choose Your Location</h3>
+            <p>Select your delivery area from the dropdown</p>
+          </div>
+          <div class="order-step">
+            <div class="step-number">2</div>
+            <h3>Browse & Add Items</h3>
+            <p>Select your favorite dishes and add to cart</p>
+          </div>
+          <div class="order-step">
+            <div class="step-number">3</div>
+            <h3>Review & Checkout</h3>
+            <p>Review your order and proceed to payment</p>
+          </div>
+          <div class="order-step">
+            <div class="step-number">4</div>
+            <h3>Track & Enjoy</h3>
+            <p>Track your order and enjoy your meal</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light">
+      <div class="container">
+        <div class="contact-content">
+          <h2>Need Help?</h2>
+          <p>Our customer support team is here to help you with your order.</p>
+          <div class="contact-buttons">
+            <a href="tel:+15551234567" class="btn btn-primary">
+              <i class="fas fa-phone"></i>
+              Call Support
+            </a>
+            <a href="../index.html#contact" class="btn btn-outline">
+              <i class="fas fa-envelope"></i>
+              Email Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Mystique Masala</h3>
+          <p>Bringing the royal flavors of Mughlai cuisine to your table since 1995.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#food-menu">Menu</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../index.html#food">Dine In</a></li>
+            <li><a href="take.html">Take Away</a></li>
+            <li><a href="order.html">Online Order</a></li>
+            <li><a href="../index.html#contact">Catering</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          <p><i class="fas fa-envelope"></i> info@mystiquemasala.com</p>
+          <p><i class="fas fa-clock"></i> 11:00 AM - 11:00 PM</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Mystique Masala. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/main.js"></script>
+  <script src="../js/order.js"></script>
+</body>
+</html>

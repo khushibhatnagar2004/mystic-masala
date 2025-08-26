@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozi - Daily Specials | Restaurant Name</title>
+    <meta name="description" content="Discover our daily specials and seasonal offerings. Fresh, innovative dishes prepared with the finest ingredients.">
+    
+    <!-- Preloads -->
+    <link rel="preload" href="../css/global.css" as="style">
+    <link rel="preload" href="../css/rozi.css" as="style">
+    <link rel="preload" href="../js/rozi.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/rozi.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">
+                <img src="../royal-food-luxury-restaurant-logo-template-vector-27175665.webp" alt="Mystique Masala Logo" height="50" width="50">
+                Mystique Masala
+            </h1>
+            
+            <ul class="menu-items">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="take.html">Take Away</a></li>
+                <li><a href="order.html">Order Online</a></li>
+                <li><a href="shuruwaat.html">Starters</a></li>
+                <li><a href="gulzar.html">Main Course</a></li>
+                <li><a href="sheerean.html">Desserts</a></li>
+                <li><a href="saaz.html">Beverages</a></li>
+                <li><a href="mashroob.html">Accompaniments</a></li>
+                <li><a href="rozi.html" class="active">Daily Specials</a></li>
+            </ul>
+            
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="page-transition">
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Daily Specials</h1>
+                        <p class="hero-subtitle">Discover our chef's daily creations and seasonal offerings. Fresh, innovative dishes prepared with the finest ingredients and culinary expertise.</p>
+                        <div class="hero-buttons">
+                            <a href="#menu" class="btn btn-primary">View Today's Specials</a>
+                            <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="../images/mughal-period-restaurant-design-500x500.webp" alt="Daily Specials" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduction">
+            <div class="container">
+                <div class="intro-content">
+                    <h2>What Makes Our Daily Specials Special?</h2>
+                    <p>Our daily specials are crafted with seasonal ingredients, culinary innovation, and a passion for creating memorable dining experiences. Each dish tells a story of tradition meets creativity.</p>
+                    <div class="intro-features">
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Seasonal Ingredients</h3>
+                            <p>Fresh, locally-sourced ingredients that change with the seasons</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <h3>Chef's Innovation</h3>
+                            <p>Creative dishes that showcase our chef's culinary expertise</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <h3>Limited Time</h3>
+                            <p>Special dishes available only for a limited time</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Today's Special Menu</h2>
+                    <p>Explore our daily offerings across different categories</p>
+                </div>
+                
+                <div class="menu-categories">
+                    <div class="category-tabs">
+                        <button class="category-tab active" data-category="breakfast">Breakfast</button>
+                        <button class="category-tab" data-category="lunch">Lunch</button>
+                        <button class="category-tab" data-category="dinner">Dinner</button>
+                        <button class="category-tab" data-category="weekend">Weekend</button>
+                    </div>
+                    
+                    <!-- Breakfast Category -->
+                    <div id="breakfast" class="menu-category active">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/selective-focus-delicious-indian-food-260nw-2172468941.webp" alt="Breakfast Special" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Morning Glory Bowl</h3>
+                                    <p class="description">A healthy breakfast bowl with quinoa, fresh fruits, nuts, and honey drizzle.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹180</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/07-curdvada.jpg" alt="Fluffy Pancakes" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Fluffy Pancakes</h3>
+                                    <p class="description">Light and fluffy pancakes served with maple syrup and fresh berries.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹220</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Lunch Category -->
+                    <div id="lunch" class="menu-category">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/mughlai-vegetable-korma-how-to-make-mughlai-vegetable-korma-ed.webp" alt="Lunch Special" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Chef's Lunch Plate</h3>
+                                    <p class="description">A complete meal with rice, dal, vegetables, and your choice of protein.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹350</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/440c9f42f08e990de1edb4130345d61c.jpg" alt="Fresh Salad" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Garden Fresh Salad</h3>
+                                    <p class="description">Mixed greens with seasonal vegetables, nuts, and house dressing.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹280</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dinner Category -->
+                    <div id="dinner" class="menu-category">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/introduction-to-mughlai-indian-cuisine-with-5-iconic-recipes.webp" alt="Dinner Special" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Evening Feast</h3>
+                                    <p class="description">A luxurious dinner spread with multiple courses and premium ingredients.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹650</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/6d4487_ae619ad8c93b49698a9f69697385ce05~mv2.webp" alt="Pasta Special" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Chef's Pasta</h3>
+                                    <p class="description">Handmade pasta with seasonal vegetables and signature sauce.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹420</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Weekend Category -->
+                    <div id="weekend" class="menu-category">
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/kesariya-thandai-kesaria-sardai-traditional-600nw-2267489389.webp" alt="Weekend Brunch" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Weekend Brunch</h3>
+                                    <p class="description">A special weekend brunch with unlimited options and live cooking stations.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹850</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+            </div>
+          </div>
+    
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="../images/afluwmjw0a.webp" alt="Weekend Dessert" loading="lazy">
+                                </div>
+                                <div class="menu-item-content">
+                                    <h3>Weekend Sweet Treat</h3>
+                                    <p class="description">Special dessert creation available only on weekends.</p>
+                                    <div class="menu-item-footer">
+                                        <span class="price">₹320</span>
+                                        <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                                    </div>
+            </div>
+            </div>
+          </div>
+            </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Chef's Special Section -->
+        <section id="chef-special">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Chef's Special Creation</h2>
+                    <p>Today's featured dish crafted with passion and creativity</p>
+                </div>
+                
+                <div class="chef-specials">
+                    <div class="special-item">
+                        <div class="special-image">
+                            <img src="../images/Dahi_Ke_Kebab_Recipe_Greek_Yogurt_Kebabs_Mughlai_Cuisine__1.jpg" alt="Chef's Special" loading="lazy">
+                        </div>
+                        <div class="special-content">
+                            <h3>Signature Fusion Dish</h3>
+                            <p>Experience the perfect blend of traditional flavors with modern culinary techniques. This dish represents our chef's vision of bringing together the best of different cuisines.</p>
+                            <div class="special-details">
+                                <div class="prep-time">
+                                    <i class="fas fa-clock"></i>
+                                    <span>25 minutes</span>
+                                </div>
+                                <span class="price">₹580</span>
+                            </div>
+                            <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                        </div>
+            </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seasonal Highlights Section -->
+        <section id="seasonal-highlights">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Seasonal Highlights</h2>
+                    <p>Dishes that celebrate the current season</p>
+                </div>
+                
+                <div class="highlights-grid">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h3>Summer Specials</h3>
+                        <p>Light and refreshing dishes perfect for warm weather</p>
+                    </div>
+                    
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Monsoon Favorites</h3>
+                        <p>Comforting dishes that warm you up during rains</p>
+                    </div>
+                    
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-fire"></i>
+            </div>
+                        <h3>Winter Warmers</h3>
+                        <p>Hearty dishes to keep you cozy in cold weather</p>
+            </div>
+          </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Want to Know More?</h2>
+                    <p>Contact us to learn about our daily specials, make reservations, or ask about specific dietary requirements.</p>
+                    <div class="contact-buttons">
+                        <a href="tel:+1234567890" class="btn btn-primary">
+                            <i class="fas fa-phone"></i>
+                            Call Us
+                        </a>
+                        <a href="mailto:info@restaurant.com" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Email Us
+                        </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Restaurant Name</h3>
+                    <p>Bringing you the finest dining experience with authentic flavors and modern presentation.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="take.html">Take Away</a></li>
+                        <li><a href="order.html">Order Online</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Restaurant Street, City</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> info@restaurant.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Restaurant Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/rozi.js"></script>
+</body>
+</html>
