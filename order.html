@@ -28,17 +28,25 @@
         box-sizing: border-box;
     }
 
-    body {
+    html, body {
+    height: 100%;              /* ✅ makes % heights work */
+    margin: 0;
+    padding: 0;
+}
+
+  body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color); /* ✅ ensures no black bg */
     color: var(--text-color-dark);
     line-height: 1.6;
-    overflow-y: auto; /* ensures scrolling */
+    overflow-y: auto;          /* ✅ enable scrolling */
 }
 
 .dashboard {
     display: flex;
-    min-height: 100%; /* was 100vh */
+    flex-direction: row;       /* ✅ keep layout */
+    min-height: 100vh;         /* ✅ full viewport height */
+    width: 100%;               /* ✅ prevent shrink */
 }
 
 
@@ -187,9 +195,9 @@
     width: 30%;
     padding: 2rem;
     background-color: #f0f0f0;
-    max-height: 100vh;   /* fits viewport */
-    overflow-y: auto;    /* scrolls inside */
-    }
+    max-height: 100vh;         /* ✅ keeps it within viewport */
+    overflow-y: auto;          /* ✅ allows independent scroll */
+}
 
     .user-info {
         display: flex;
