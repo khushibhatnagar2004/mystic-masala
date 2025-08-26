@@ -29,16 +29,19 @@
     }
 
     body {
-        font-family: 'Poppins', sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-color-dark);
-        line-height: 1.6;
-    }
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color-dark);
+    line-height: 1.6;
+    overflow-y: auto; /* ensures scrolling */
+}
 
-    .dashboard {
-        display: flex;
-        min-height: 100vh;
-    }
+.dashboard {
+    display: flex;
+    min-height: 100%; /* was 100vh */
+}
+
+
 
     /* Restaurant Panel */
     .restaurant-panel {
@@ -181,9 +184,11 @@
 
     /* Order Panel */
     .order-panel {
-        width: 30%;
-        padding: 2rem;
-        background-color: #f0f0f0;
+    width: 30%;
+    padding: 2rem;
+    background-color: #f0f0f0;
+    max-height: 100vh;   /* fits viewport */
+    overflow-y: auto;    /* scrolls inside */
     }
 
     .user-info {
